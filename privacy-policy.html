@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — একটি মালিক অটো ফিলার</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f4f8fb; color: #1a3a52;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #1a4a6e, #2d8a9e);
+      color: #fff; padding: 40px 24px; text-align: center;
+    }
+    header h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+    header p  { font-size: 14px; opacity: 0.85; }
+    .container { max-width: 760px; margin: 0 auto; padding: 40px 24px; }
+    .card {
+      background: #fff; border-radius: 16px;
+      padding: 36px; margin-bottom: 20px;
+      box-shadow: 0 2px 16px rgba(26,74,110,0.08);
+    }
+    h2 {
+      font-size: 17px; font-weight: 700;
+      color: #1a4a6e; margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e8f4f8;
+    }
+    p { font-size: 14px; color: #2a4a62; margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 14px; color: #2a4a62; margin-bottom: 6px; }
+    .highlight {
+      background: #e8f4f8; border-left: 4px solid #2d8a9e;
+      border-radius: 0 8px 8px 0; padding: 14px 16px;
+      margin: 14px 0; font-size: 14px; color: #1a4a6e; font-weight: 600;
+    }
+    .badge {
+      display: inline-block; background: #e8f5e9; color: #1e7e44;
+      padding: 3px 12px; border-radius: 20px;
+      font-size: 12px; font-weight: 700; margin-bottom: 14px;
+    }
+    footer {
+      text-align: center; padding: 30px;
+      font-size: 12px; color: #6b8a9e;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🏠 Privacy Policy</h1>
+  <p>একটি মালিক অটো ফিলার — Chrome Extension</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <span class="badge">Last updated: June 2026</span>
+    <h2>Overview</h2>
+    <p>
+      This Privacy Policy describes how <strong>একটি মালিক অটো ফিলার</strong>
+      ("the Extension") collects, uses, and protects information when you use our
+      Chrome Extension. This Extension is designed to assist users of
+      <strong>undp.ldtax.gov.bd</strong> by automatically filling in land owner
+      details during the registration process.
+    </p>
+    <div class="highlight">
+      We are committed to protecting your privacy. This Extension does not sell,
+      share, or misuse your personal data in any way.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>1. Information We Collect</h2>
+    <p>The Extension collects only the minimum information necessary to function:</p>
+    <ul>
+      <li><strong>Name</strong> — entered by the user during registration for access approval</li>
+      <li><strong>Mobile number</strong> — used as a unique identifier for approval status lookup</li>
+      <li><strong>Land owner data</strong> — name, father's name, and address entered by the user to enable auto-fill functionality</li>
+    </ul>
+    <p>
+      We do <strong>not</strong> collect passwords, payment information, national ID numbers,
+      browsing history, or any data beyond what is listed above.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>2. How We Use Your Information</h2>
+    <ul>
+      <li>Your <strong>name and mobile number</strong> are stored in Firebase Realtime Database solely to verify whether you have been granted access by the administrator.</li>
+      <li>Your <strong>land owner data</strong> (owner name, father's name, address) is stored locally on your device using <code>chrome.storage.local</code> and is never transmitted to any server.</li>
+      <li>No data is used for advertising, marketing, profiling, or any purpose beyond operating the Extension.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>3. Data Storage</h2>
+    <ul>
+      <li>
+        <strong>Local storage (on your device):</strong> Land owner auto-fill data
+        is stored only on your device via <code>chrome.storage.local</code>.
+        It never leaves your device.
+      </li>
+      <li>
+        <strong>Remote storage (Firebase Realtime Database):</strong> Your name,
+        mobile number, and approval status are stored in a Firebase Realtime Database
+        located in the <strong>asia-southeast1 (Singapore)</strong> region,
+        operated by Google LLC under their infrastructure.
+      </li>
+    </ul>
+    <div class="highlight">
+      Firebase's data handling is governed by Google's Privacy Policy:
+      https://policies.google.com/privacy
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4. Data Sharing</h2>
+    <p>
+      We do <strong>not</strong> share your personal data with any third party,
+      advertiser, analytics provider, or external service — except for Firebase
+      Realtime Database (Google), which is used solely for storing approval status
+      as described above.
+    </p>
+    <p>
+      The Extension does not communicate with any server other than
+      <strong>undp.ldtax.gov.bd</strong> (the target government portal) and
+      <strong>Firebase Realtime Database</strong>.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>5. Permissions Justification</h2>
+    <p>The Extension requests the following Chrome permissions:</p>
+    <ul>
+      <li><strong>storage</strong> — to save land owner data and approval status locally on your device</li>
+      <li><strong>tabs</strong> — to detect when you are on undp.ldtax.gov.bd and send auto-fill data to the active tab</li>
+      <li><strong>scripting</strong> — to inject auto-fill functionality into undp.ldtax.gov.bd pages</li>
+      <li><strong>host_permissions (undp.ldtax.gov.bd)</strong> — to run the auto-fill content script on the target government portal only</li>
+      <li><strong>host_permissions (*.firebasedatabase.app)</strong> — to check approval status from Firebase Realtime Database</li>
+    </ul>
+    <p>No permission is requested beyond what is strictly necessary for the Extension to function.</p>
+  </div>
+
+  <div class="card">
+    <h2>6. User Rights & Data Deletion</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> — contact us to know what data we hold about you</li>
+      <li><strong>Delete</strong> — request deletion of your name and mobile number from our database at any time</li>
+      <li><strong>Remove local data</strong> — uninstalling the Extension automatically removes all locally stored data from your device</li>
+    </ul>
+    <p>To request data deletion, contact us at the email address below.</p>
+  </div>
+
+  <div class="card">
+    <h2>7. Children's Privacy</h2>
+    <p>
+      This Extension is intended for professional use by government land tax officials
+      and authorized personnel only. It is not directed at children under the age of 13,
+      and we do not knowingly collect data from children.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>8. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Any changes will be
+      reflected by updating the "Last updated" date at the top of this page.
+      Continued use of the Extension after changes constitutes acceptance of the
+      updated policy.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>9. Contact Us</h2>
+    <p>If you have any questions or concerns about this Privacy Policy, please contact:</p>
+    <ul>
+      <li><strong>Developer:</strong> Land Automation Pro</li>
+      <li><strong>Email:</strong> [আপনার ইমেইল এখানে বসান]</li>
+      <li><strong>Website:</strong> [আপনার ওয়েবসাইট এখানে বসান]</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 একটি মালিক অটো ফিলার. All rights reserved.
+</footer>
+
+</body>
+</html>
